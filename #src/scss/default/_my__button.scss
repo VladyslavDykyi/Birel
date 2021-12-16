@@ -2,10 +2,10 @@
 .btn {
 	width: 116px;
 	height: 60px;
-	border-radius: 50%;
-	background: $blue;
-	border: 1px solid #573CDA;
-	font-family: $R-m;
+	border-radius: 30px;
+	background: $purple;
+	border: 1px solid $purple;
+	font-family: $WS-m;
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 24px;
@@ -13,13 +13,98 @@
 	justify-content: center;
 	align-items: center;
 	color: $white;
-	&:first-letter {
+	&::first-letter {
 		text-transform: uppercase;
 	}
 	&:hover {
-		background: $lite-blue;
+		background: $white;
+		color: $purple-hover;
+		border-color: $purple-hover;
 	}
 	&:active {
-		background: $blue;
+		background: $white;
+		color: $purple;
+	}
+	&-green {
+		background: $green;
+		border: 1px solid $green;
+		color: $white;
+		&:hover {
+			background: $white;
+			color: $green-hover;
+			border-color: $green-hover;
+		}
+		&:active {
+			background: $white;
+			color: $green;
+		}
+	}
+}
+.btn2 {
+	width: 116px;
+	height: 60px;
+	border-radius: 30px;
+	background: $white;
+	border: 1px solid $purple;
+	font-family: $WS-m;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $purple;
+	&::first-letter {
+		text-transform: uppercase;
+	}
+	&:hover {
+		background: $purple-hover;
+		color: $white;
+		border-color: $purple-hover;
+	}
+	&:active {
+		background: $purple;
+		color: $white;
+	}
+	&-green {
+		background: $white;
+		border: 1px solid $green;
+		color:  $green;
+		&:hover {
+			background:  $green-hover;
+			color: $white;
+			border-color: $green-hover;
+		}
+		&:active {
+			background: $green;
+			color: $white;
+		}
+	}
+}
+.btn3 {
+	width: 144px;
+	height: 60px;
+	border-radius: 30px;
+	background: $white;
+	border: 1px solid transparent;
+	color: $purple;
+	font-family: $WS-m;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 10px;
+	&::first-letter {
+		text-transform: uppercase;
+	}
+	&:hover {
+		color: $purple-hover;
+		border-color: $purple-hover;
+	}
+	&:active {
+		color: $purple;
+		border-color: $purple;
 	}
 }

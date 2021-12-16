@@ -1,30 +1,41 @@
 $white: #fff;
-$lite-greey: #f6f6f6;
-$small-greey: #939393;
-$smale-grey: #E9E9E9;
-$greey: #777;
-$dark-green: #333;
-$black: #000;
-$black2: #131313;
-$lite-blue: #00acde;
-$blue: #573CDA;
-$blue-text: #017cc2;
-$green: #1BC082;
-$red: #ff0000;
-$yeallow: #fab73d;
-$orange: #F2994A;
+$white2:#F6F4FF;
+
+$grey:#C4C4C4;
+$grey-lite:#C0BCD6;
+
+$purple:#573CDA;
+$purple-hover:#5634F7;
+$purple2:#515994;
+$purple3:#2A206A;
+
+$green:#1BC082;
+$green-hover:#23C89A;
+
+$gradient:linear-gradient(208.1deg, #F6F4FF 7.35%, #E5DDFA 79.61%);;
+
+$box-shadow:6px 6px 64px rgba(0, 0, 0, 0.25);
+
+$A-r:"anton-Regular";
+$WS-r:"WorkSans-Regular";
+$WS-m:"WorkSans-Medium";
+$WS-sb:"WorkSans-SemiBold";
+
 
 /*---цвета ---*/
+* {
+	box-sizing: border-box;
+}
 textarea,
 input,
 a,
 button {
 	transition: all 0.2s linear;
+	outline: none;
 }
 button {
 	cursor: pointer;
 	padding: 0;
-	outline: none;
 	text-decoration: none;
 }
 a {
@@ -57,9 +68,7 @@ i {
 label {
 	position: relative;
 }
-button:disabled {
-	background-color: $greey;
-}
+
 /*---контейнер сайта ---*/
 .container {
 	position: relative;
