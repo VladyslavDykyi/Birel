@@ -1,0 +1,25 @@
+/*--- стили кнопок ---*/
+.btn {
+	width: 116px;
+	height: 60px;
+	border-radius: 50%;
+	background: $blue;
+	border: 1px solid #573CDA;
+	font-family: $R-m;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $white;
+	&:first-letter {
+		text-transform: uppercase;
+	}
+	&:hover {
+		background: $lite-blue;
+	}
+	&:active {
+		background: $blue;
+	}
+}

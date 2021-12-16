@@ -1,0 +1,88 @@
+$white: #fff;
+$lite-greey: #f6f6f6;
+$small-greey: #939393;
+$smale-grey: #E9E9E9;
+$greey: #777;
+$dark-green: #333;
+$black: #000;
+$black2: #131313;
+$lite-blue: #00acde;
+$blue: #573CDA;
+$blue-text: #017cc2;
+$green: #1BC082;
+$red: #ff0000;
+$yeallow: #fab73d;
+$orange: #F2994A;
+
+/*---цвета ---*/
+textarea,
+input,
+a,
+button {
+	transition: all 0.2s linear;
+}
+button {
+	cursor: pointer;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+}
+a {
+	text-decoration: none;
+}
+html {
+	scroll-behavior: smooth;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+textarea {
+	resize: none;
+}
+figure {
+	& figcaption {
+		display: none;
+	}
+}
+body.lock {
+	overflow: hidden;
+}
+i {
+	transition: all 0.2s linear;
+	&::before {
+		transition: all 0.2s linear;
+	}
+}
+label {
+	position: relative;
+}
+button:disabled {
+	background-color: $greey;
+}
+/*---контейнер сайта ---*/
+.container {
+	position: relative;
+	max-width: 1180px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+	@media screen and (max-width: 1024px) {
+		max-width: 768px;
+		padding: 0 15px;
+	}
+	@media screen and (max-width: 768px) {
+		max-width: 100%;
+		padding: 0 10px;
+	}
+}
+/*---контейнер сайта ---*/
+.bg-site {
+	background-color: $white;
+	padding: 150px 0 0;
+	box-sizing: border-box;
+	@media screen and (max-width: 1024px) {
+		padding: 120px 0 0;
+	}
+}
