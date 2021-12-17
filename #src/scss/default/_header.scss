@@ -1,0 +1,28 @@
+.header {
+	padding: 36px 0;
+	background-color: $white;
+	&-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&-logo {
+	
+	}
+	&-nav {
+	
+	}
+	&-menu {
+		display: flex;
+		align-items: center;
+		grid-gap: 142px;
+		&-item {
+		
+		}
+	}
+	&-btn-cont {
+		display: flex;
+		align-items: center;
+		grid-gap: 10px;
+	}
+}

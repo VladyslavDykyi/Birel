@@ -1,3 +1,11 @@
+.btn-group {
+	display: flex;
+	align-items: center;
+	grid-gap: 10px;
+	&-w50 {
+		grid-gap: 50px;
+	}
+}
 /*--- стили кнопок ---*/
 .btn {
 	width: 116px;
@@ -107,4 +115,7 @@
 		color: $purple;
 		border-color: $purple;
 	}
+}
+.w170 {
+	width: 170px;
 }
