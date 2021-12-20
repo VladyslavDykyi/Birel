@@ -1,0 +1,49 @@
+.content-features {
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 98px;
+	
+	&-title {
+		width: 100%;
+	}
+	
+	&-search {
+		width: 440px;
+		
+		
+		& div {
+			width: 440px;
+			height: 286px;
+			background: $gradient;
+		}
+		
+		& div img {
+			padding: 40px 140px;
+		}
+		
+	}
+	
+	&-shield {
+		width: 440px;
+		& div {
+			width: 440px;
+			height: 286px;
+			background: $gradient;
+		}
+		& div img {
+			padding: 40px 120px;
+		}
+	}
+	
+	&-arrow {
+		width: 440px;
+		& div {
+			width: 440px;
+			height: 286px;
+			background: $gradient;
+		}
+		& div img {
+			padding: 40px 120px;
+		}
+	}
+}

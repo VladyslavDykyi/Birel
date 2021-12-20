@@ -1,0 +1,47 @@
+.content-block {
+	display: flex;
+	padding-bottom: 150px;
+	&-left {
+		width: 50%;
+		& .title {
+			margin-bottom: 40px;
+		}
+		& .btn-group {
+			margin-top: 50px;
+		}
+	}
+	&-right {
+		width: 50%;
+		position: relative;
+		& .top-block {
+			position: absolute;
+			height: 100%;
+			& svg {
+				position: absolute;
+				top: -140px;
+				left: -30px;
+				z-index: 15;
+			}
+		}
+		& .mid-block {
+			position: absolute;
+			height: 100%;
+			& svg {
+				position: absolute;
+				top: -70px;
+				left: 0;
+				z-index: 10;
+			}
+		}
+		& .bot-block {
+			position: absolute;
+			height: 100%;
+			& svg {
+				position: absolute;
+				top: 0;
+				left: 30px;
+				z-index: 5;
+			}
+		}
+    }
+}
