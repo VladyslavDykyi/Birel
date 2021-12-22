@@ -25,6 +25,10 @@
 .f36-l42 {
 	font-size: 36px;
 	line-height: 42px;
+	@media screen and (max-width: 580px) {
+		font-size: 28px;
+		line-height: 36px;
+	}
 }
 .f54-l70 {
 	font-size: 54px;
@@ -41,6 +45,16 @@
 .title {
 	font-family: $A-r;
 	font-weight: 400;
+	&.f80-l88 {
+		@media screen and (max-width: 1440px) {
+			font-size: 64px;
+			line-height: 74px;
+		}
+		@media screen and (max-width: 580px) {
+			font-size: 40px;
+			line-height: 48px;
+		}
+	}
 	&.f80-l88 span {
 		position: relative;
 		z-index: 10;
@@ -54,12 +68,25 @@
 			height: 14px;
 			display: inline-block;
 			background: $green;
+			@media screen and (max-width: 1440px) {
+				bottom: 14px;
+			}
+			@media screen and (max-width: 580px) {
+				bottom: 6px;
+				width: 100%;
+				left: 0;
+			}
 		}
 	}
+	
 	&.f54-l70 {
 		display: inline-block;
 		position: relative;
 		z-index: 10;
+		@media screen and (max-width: 580px) {
+			font-size: 38px;
+			line-height: 44px;
+		}
 		&:after {
 			content: '';
 			position: absolute;
@@ -70,6 +97,9 @@
 			height: 14px;
 			display: inline-block;
 			background: $green;
+			@media screen and (max-width: 580px) {
+				bottom: 0;
+			}
 		}
 	}
 }

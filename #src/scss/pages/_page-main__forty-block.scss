@@ -1,19 +1,31 @@
-.content-investor {
+.investor {
 	margin-top: 150px;
-	display: flex;
-	&-left {
-		width: 50%;
+	@media screen and (max-width: 768px) {
+		margin-top: 50px;
+	}
+	& .content-block-left {
 		padding-left: 147px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		@media screen and (max-width: 1024px) {
+			padding: 100px 0;
+		}
+		@media screen and (max-width: 768px) {
+			padding: 50px 0;
+		}
 		& .t-r {
 			width: 80%;
+			@media screen and (max-width: 1024px) {
+				width: 100%;
+			}
 		}
 	}
-	&-right {
-		width: 50%;
+	& .content-block-right {
 		padding: 22px 84px 143px;
 		background: $gradient;
+		@media screen and (max-width: 1024px) {
+			padding: 28px 84px 28px;
+		}
 	}
 }

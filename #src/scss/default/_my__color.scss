@@ -6,6 +6,9 @@
 }
 .grey-lite {
 	color: $grey-lite;
+	&::placeholder {
+		color: $grey-lite;
+	}
 }
 .purple1 {
 	color: $purple;

@@ -12,9 +12,14 @@ $purple3:#2A206A;
 $green:#1BC082;
 $green-hover:#23C89A;
 
-$gradient:linear-gradient(208.1deg, #F6F4FF 7.35%, #E5DDFA 79.61%);;
+$black:#000;
+
+$gradient:linear-gradient(208.1deg, #F6F4FF 7.35%, #E5DDFA 79.61%);
+$gradient-two:linear-gradient(93.19deg, #573CDA 10.16%, #3D2B93 97.41%);
 
 $box-shadow:6px 6px 64px rgba(0, 0, 0, 0.25);
+$box-shadow2:0px 4px 4px rgba(0, 0, 0, 0.25);
+
 
 $A-r:"anton-Regular";
 $WS-r:"WorkSans-Regular";
@@ -57,7 +62,9 @@ figure {
 	}
 }
 body.lock {
-	overflow: hidden;
+	@media screen and (max-width: 425px) {
+		overflow: hidden;
+	}
 }
 i {
 	transition: all 0.2s linear;
@@ -88,7 +95,7 @@ label {
 	}
 	@media screen and (max-width: 768px) {
 		max-width: 100%;
-		padding: 0 10px;
+		padding: 0 15px;
 	}
 }
 /*---контейнер сайта ---*/
@@ -97,6 +104,19 @@ label {
 	padding: 320px 0 0;
 	box-sizing: border-box;
 	@media screen and (max-width: 1024px) {
-		padding: 120px 0 0;
+		padding: 150px 0 0;
+	}
+}
+.bg-form {
+	padding: 140px 0;
+	background: $gradient-two;
+	@media screen and (max-width: 1024px) {
+		padding: 40px 0;
+	}
+}
+.wg:hover {
+	& a {
+		color: $white;
+		font-weight: 600;
 	}
 }

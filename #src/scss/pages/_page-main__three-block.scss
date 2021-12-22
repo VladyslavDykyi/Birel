@@ -1,23 +1,28 @@
-.block-mission {
-	display: flex;
-	&-left {width: 50%;
+.mission {
+	& .content-block-left {
 		& .title {
 			margin-bottom: 45px;
 		}
+		
 		& .btn {
 			margin-top: 70px;
 		}
 	}
-	&-right {
-		width: 50%;
+	
+	& .content-block-right {
 		background-image: url("../../img/bg-3.svg");
 		background-repeat: no-repeat;
+		
 		& .img-candels {
 			width: 410px;
 			margin: 0 auto;
 			display: block;
 			position: relative;
-			top:50px;
+			top: 50px;
+			@media screen and (max-width: 768px) {
+				width: 100vw;
+				display: none;
+			}
 		}
 	}
 }

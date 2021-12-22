@@ -1,18 +1,30 @@
-.content-shareholders {
-	display: flex;
-	&-left {
-		width: 50%;
+.shareholders {
+	@media screen and (max-width: 1024px) {
+		flex-direction: column-reverse;
+	}
+	& .content-block-left {
 		padding: 117px 84px 118px;
 		background: $gradient;
+		@media screen and (max-width: 1024px) {
+			padding: 28px 84px 28px;
+		}
 	}
-	&-right {
-		width: 50%;
+	& .content-block-right {
 		padding-left: 147px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		@media screen and (max-width: 1024px) {
+			padding: 100px 0;
+		}
+		@media screen and (max-width: 768px) {
+			padding: 50px 0;
+		}
 		& .t-r {
 			width: 80%;
+			@media screen and (max-width: 1024px) {
+				width: 100%;
+			}
 		}
 	}
 }

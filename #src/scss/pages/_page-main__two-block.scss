@@ -3,7 +3,22 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	&-item {
+	@media screen and (max-width: 1024px) {
+		padding: 50px 0;
+	}
+	@media screen and (max-width: 580px) {
+		flex-wrap: wrap;
+	}
 	
+	&-item {
+		position: relative;
+		width: 150px;
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& picture {
+			position: absolute;
+		}
 	}
 }
