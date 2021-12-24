@@ -1,0 +1,30 @@
+.content-block-grid {
+	display: grid;
+	grid-template-areas:
+        "title img"
+        "text text";
+	grid-template-columns: 50% 50%;
+	margin-bottom: 120px;
+	& .content-block-title {
+		grid-area: title;
+		& h1 {
+			width: 70%;
+			margin-bottom: 25px;
+		}
+		& p {
+			margin-right: 20px;
+		}
+	}
+	& .content-block-img {
+		grid-area: img;
+	}
+	& .content-block-text {
+		grid-area: text;
+		display: flex;
+		justify-content: center;
+		padding-bottom: 10px;
+		& p {
+			width: 50%;
+		}
+	}
+}

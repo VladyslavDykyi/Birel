@@ -45,6 +45,7 @@
 .title {
 	font-family: $A-r;
 	font-weight: 400;
+	text-transform: uppercase;
 	&.f80-l88 {
 		@media screen and (max-width: 1440px) {
 			font-size: 64px;
@@ -55,7 +56,7 @@
 			line-height: 48px;
 		}
 	}
-	&.f80-l88 span {
+	&.b span {
 		position: relative;
 		z-index: 10;
 		&:after {
@@ -78,8 +79,13 @@
 			}
 		}
 	}
+	&.b2 span {
+		&:after {
+			bottom: 10px;
+		}
+	}
 	
-	&.f54-l70 {
+	&.s {
 		display: inline-block;
 		position: relative;
 		z-index: 10;

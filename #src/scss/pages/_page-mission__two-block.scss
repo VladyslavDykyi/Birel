@@ -1,0 +1,27 @@
+.content-block {
+	display: flex;
+	margin-bottom: 130px;
+	@media screen and (max-width: 1024px) {
+		flex-direction: column;
+	}
+	&-left {
+		width: 50%;
+		position: relative;
+		@media screen and (max-width: 1024px) {
+			width: 100%;
+		}
+	}
+	&-right {
+		width: 50%;
+		position: relative;
+		@media screen and (max-width: 1024px) {
+			width: 100%;
+		}
+		& h2 {
+			margin-bottom: 45px;
+		}
+		& p {
+			margin-bottom: 30px;
+		}
+	}
+}

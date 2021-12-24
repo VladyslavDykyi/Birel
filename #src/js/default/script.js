@@ -1,286 +1,119 @@
-function dropCatalog22(elem) {
-	const tmp_elem = $(elem).siblings('.auto-parts__container-item__dropList');
-	if ($(elem).hasClass('active')) {
-		$(elem).removeClass('active');
-		$(tmp_elem).slideUp();
-		return;
-	} else {
-		$('.auto-parts__container-item__btn').removeClass('active');
-		$(elem).addClass('active');
-		$('.auto-parts__container-item__dropList').removeClass('active').slideUp();
-		if ($(elem).hasClass('active')) {
-			$(elem).siblings('.auto-parts__container-item__dropList').slideDown();
+"use strict";
+const FUNCTIONS = {
+	// no easing, no acceleration
+	linear: t => t,
+	// accelerating from zero velocity
+	easeInQuad: t => t * t,
+	// decelerating to zero velocity
+	easeOutQuad: t => t * (2 - t),
+	// acceleration until halfway, then deceleration
+	easeInOutQuad: t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t,
+	// accelerating from zero velocity
+	easeInCubic: t => t * t * t,
+	// decelerating to zero velocity
+	easeOutCubic: t => (--t) * t * t + 1,
+	// acceleration until halfway, then deceleration
+	easeInOutCubic: t => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1,
+	// accelerating from zero velocity
+	easeInQuart: t => t * t * t * t,
+	// decelerating to zero velocity
+	easeOutQuart: t => 1 - (--t) * t * t * t,
+	// acceleration until halfway, then deceleration
+	easeInOutQuart: t => t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t,
+	// accelerating from zero velocity
+	easeInQuint: t => t * t * t * t * t,
+	// decelerating to zero velocity
+	easeOutQuint: t => 1 + (--t) * t * t * t * t,
+	// acceleration until halfway, then deceleration
+	easeInOutQuint: t => t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t,
+	easeOutBounce: t => {
+		const n1 = 7.5625;
+		const d1 = 2.75;
+
+		if (t < 1 / d1) {
+			return n1 * t * t;
+		} else if (t < 2 / d1) {
+			return n1 * (t -= 1.5 / d1) * t + 0.75;
+		} else if (t < 2.5 / d1) {
+			return n1 * (t -= 2.25 / d1) * t + 0.9375;
 		} else {
-			$(elem).siblings('.auto-parts__container-item__dropList').slideUp();
+			return n1 * (t -= 2.625 / d1) * t + 0.984375;
 		}
-	}
-}
-$(document).mouseup(function (e) {
-	if (!$('.auto-parts__container').is(e.target) // если клик был не по нашему блоку
-		&& $('.auto-parts__container').has(e.target).length === 0) { // и не по его дочерним элементам
-		$('.auto-parts__container-item__btn')
-			.removeClass('active');
-		$('.auto-parts__container-item__dropList').slideUp();
-	}
-});
+	},
+};
 
-// Корзина товара кнопки +1 и -1
-function increment(e) {
-	const button = $(e);
-	const oldVal = $(e).parent().children('.iterator').val();
-
-	function i() {
-		const newVal = parseFloat(oldVal) + 1;
-		return newVal;
-	}
-
-	button.parent().children('.iterator').val(i());
+function animateText(element, text, duration) {
+	animateCore(p => {
+		const length = Math.ceil(text.length * p);
+		element.innerHTML = text.slice(0, length);
+	}, duration, FUNCTIONS.linear,element);
 }
 
-function decrement(e) {
-	const button = $(e);
-	const oldVal = $(e).parent().children('.iterator').val();
+function animateCore(render, duration, timingFn,element) {
+	const timePerFrame = 1000 / 60;
+	const startTime = Date.now();
 
-	function i() {
-		if (oldVal > 0) {
-			newVal = parseFloat(oldVal) - 1;
-		} else {
-			newVal = 0;
-		}
-		return newVal;
-	}
+	const timerId = setInterval(() => {
+		const currentTime = Date.now();
+		let fraction = (currentTime - startTime) / duration;
 
-	button.parent().children('.iterator').val(i());
-}
-
-// Корзина товара кнопки +1 и -1
-// Корзина удаление елемента
-function deleteItem(e) {
-	$(e).parent()
-		.parent()
-		.remove();
-}
-function deleteItem2(e) {
-	$(e).parent()
-		.parent()
-		.parent()
-		.remove();
-}
-// Корзина удаление елемента
-// прекращение ивентов
-
-$(document).mouseup(function (e) {
-	if (!$('.catalog').is(e.target) // если клик был не по нашему блоку
-		&& $('.catalog').has(e.target).length === 0 &&
-		!$('.drop__catalog').is(e.target) // если клик был не по нашему блоку
-		&& $('.drop__catalog').has(e.target).length === 0) { // и не по его дочерним элементам
-		$('.drop__catalog').removeClass('active');
-		if ($('.catalog').children('i').hasClass('icon-close')) {
-			$('.catalog')
-				.children('i')
-				.removeClass('icon-close')
-				.addClass('icon-burger');
-		}
-	}
-});
-
-// прекращение ивентов
-function openMob(e) {
-	$(e).toggleClass('active');
-	$(e).parent().parent().toggleClass('active');
-}
-$(document).ready(function () {
-	if($(window).width() >= 768){
-		$(".userLogin").hover(
-			function () {
-				$('.dropUsers').stop(true, true).slideDown('medium');
-			},
-			function () {
-				$('.dropUsers').stop(true, true).slideUp('medium');
-			}
-		);
-		$(".userLogin2").hover(
-			function () {
-				$('.dropUsers2').stop(true, true).slideDown('medium');
-			},
-			function () {
-				$('.dropUsers2').stop(true, true).slideUp('medium');
-			}
-		);
-	}
-});
-
-
-function menuUser() {
-	if($(window).width() <= 768){
-		$('#dropUsers').toggleClass('active');
-		$('body').toggleClass('lock');
-	}
-}
-function menuUser2() {
-	if($(window).width() <= 768){
-		$('#dropUser2').toggleClass('active');
-		$('body').toggleClass('lock');
-	}
-}
-
-// каталог на пк
-function onCatalog(e) {
-	if ($(e).children('i')
-		.hasClass('icon-burger')) {
-		$(e).children('i')
-			.removeClass('icon-burger')
-			.addClass('icon-close');
-		$(e).siblings('.drop__catalog')
-			.addClass('active');
-	} else {
-		$(e).children('i')
-			.removeClass('icon-close')
-			.addClass('icon-burger');
-		$(e).siblings('.drop__catalog')
-			.removeClass('active');
-	}
-	return;
-}
-
-function onCatalogLevel2(e) {
-	$(e).siblings('.drop__catalog__level2')
-		.addClass('active');
-	addHeight(e);
-	return;
-}
-
-function offCatalogLevel2(e) {
-	$(e).parent('.drop__catalog__level2')
-		.removeClass('active');
-	$(e).parent()
-		.parent()
-		.parent()
-		.css('height', 541);
-	return;
-}
-
-// каталог на пк
-// мобилка меню
-function onMobileCatalog(e) {
-	if ($(e).children('i')
-		.hasClass('icon-burger')) {
-		$(e).children('i')
-			.removeClass('icon-burger')
-			.addClass('icon-close');
-		$(e).siblings('.catalog-Mobil__drop')
-			.addClass('active');
-		$('body').addClass('lock');
-	} else if ($(e).children('i')
-		.hasClass('icon-close')) {
-		$(e).children('i')
-			.removeClass('icon-close')
-			.addClass('icon-burger');
-		$(e).siblings('.catalog-Mobil__drop')
-			.removeClass('active');
-		$('body').removeClass('lock');
-	}
-	return;
-}
-
-$(document).mouseup(function (e) {
-	if (!$('.catalog-Mobil').is(e.target) // если клик был не по нашему блоку
-		&& $('.catalog-Mobil').has(e.target).length === 0 &&
-		!$('.catalog-Mobil__drop').is(e.target) // если клик был не по нашему блоку
-		&& $('.catalog-Mobil__drop').has(e.target).length === 0) { // и не по его дочерним элементам
-		$('.catalog-Mobil__drop').removeClass('active');
-		if ($('.catalog-Mobil').children('i').hasClass('icon-close')) {
-			$('.catalog-Mobil')
-				.children('i')
-				.removeClass('icon-close')
-				.addClass('icon-burger');
-			$('body').removeClass('lock');
-		}
-	}
-	if (!$('.sidebar-content').is(e.target) // если клик был не по нашему блоку
-		&& $('.sidebar-content').has(e.target).length === 0) {
-		$('.sidebar-content__box').removeClass('active');
-		$('.sidebar-content__box-container').slideUp();
-		$('.sidebar-content__box-container__item').removeClass('active');
-		$('.sidebar-content__box-container__item-box').slideUp();
-	}
-	if (!$('.btn-on-mob').is(e.target) // если клик был не по нашему блоку
-		&& $('.btn-on-mob').has(e.target).length === 0 &&
-		!$('.catalog-Mobil__drop').is(e.target) // если клик был не по нашему блоку
-		&& $('.catalog-Mobil__drop').has(e.target).length === 0) {
-		$('.btn-on-mob').removeClass('active');
-		$('.reviews-box-head').removeClass('active');
-	}
-	if (!$('.list-body-item').is(e.target) // если клик был не по нашему блоку
-		&& $('.list-body-item').has(e.target).length === 0) {
-		$('.list-body-item').removeClass('active');
-		$('.item-content').slideUp();
-	}
-});
-// мобилка меню
-
-
-function addHeight(param) {
-	const h = $(param)
-		.siblings('.drop__catalog__level2')
-		.height();
-	const sh = h + 10;
-	const nsh = sh.toString();
-	$(param).parent().parent().css('height', nsh);
-}
-// инициализация селект 2
-$('.js-example-basic-single').select2();
-$('.js-example-basic-single2').select2({
-	minimumResultsForSearch: Infinity,
-});
-// инициализация селект 2
-// tabs
-if ($('main').hasClass('cart-product')) {
-	bindTabs('#tabs');
-}
-if ($('.reviews-box').hasClass('tabs')) {
-	bindTabs('#tabs2');
-}
-if ($('.origin-catalog-sideBar').hasClass('tabs3')) {
-	bindTabs('#tabs3');
-}
-function bindTabs(container) {
-	container = $(container);
-
-	const titles = $('.title-tab', container);
-	const contents = $('.content-tabs', container);
-
-	titles.on('click', function () {
-		const index = titles.index(this);
-
-		if (index < 0) {
-			return;
+		if (fraction < 0) {
+			fraction = 0;
+		} else if (fraction > 1) {
+			fraction = 1;
 		}
 
-		titles.removeClass('active');
-		contents.removeClass('active');
+		const percents = timingFn(fraction);
 
-		titles.eq(index).addClass('active');
-		contents.eq(index).addClass('active');
+		render(percents);
 
-	});
-	if (container.hasClass('reviews-box')) {
-		titles.on('click', function () {
-			const index = titles.index(this);
-			let text = titles.eq(index).text();
-			if (index < 0) {
-				return;
-			}
-			$('.btn-on-mob').html('').append(text);
-		});
+		if (fraction === 1) {
+			clearInterval(timerId);
+			addGreenLine(element);
+		}
+
+	}, timePerFrame);
+
+}
+function addGreenLine(elem) {
+ const text = elem.textContent;
+	const textArr = text.split(' ');
+	for (let i = 0; i < textArr.length; i++) {
+		if(textArr[i]== 'makes') {
+			textArr[i] = `<span>${textArr[i]}</span>`;
+		}
+		if (textArr[i]== 'liquid') {
+			textArr[i] = `<span>${textArr[i]}</span>`;
+		}
+		if (textArr[i]== 'flexible') {
+			textArr[i] = `<span>${textArr[i]}</span>`;
+		}
 	}
+	elem.innerHTML = textArr.join(' ');
 }
 
-// tabs
+function animate(element, styleName, endValue, time) {
+	const timePerFrame = 1000 / 60;
 
+	const styles = getComputedStyle(element);
+	const startValue = styles[styleName];
+	let start = parseInt(startValue);
+	const end = parseInt(endValue);
 
+	const diff = end - start;
+	let stepsLeft = Math.round(time / timePerFrame);
+	const stepSize = diff / stepsLeft;
 
+	const timerId = setInterval(() => {
+		start += stepSize;
+		stepsLeft--;
 
+		element.style[styleName] = start + 'px';
 
+		if (!stepsLeft) {
+			clearInterval(timerId);
+		}
+	}, timePerFrame);
+}
 
-
+export { animateText,animate };
