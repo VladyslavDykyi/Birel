@@ -2,25 +2,43 @@
 	padding: 170px 0 150px;
 	position: relative;
 	@media screen and (max-width: 1024px) {
-		padding: 150px 0 50px;
+		padding: 50px 0;
+	}
+	@media screen and (max-width: 580px) {
+		padding: 25px 0;
 	}
 	& .content-block-left {
 		position: relative;
 		z-index: 10;
-		@media screen and (max-width: 1440px){
+		@media screen and (max-width: 1440px) {
 			width: 40%;
 		}
-		@media screen and (max-width: 1280px){
+		@media screen and (max-width: 1280px) {
 			width: 40%;
 		}
 		@media screen and (max-width: 1024px) {
 			width: 100%;
 		}
+		
 		& h1 {
 			height: 176px;
 			width: 85%;
+			@media screen and (max-width: 1440px) {
+				width: 100%;
+				height: 230px;
+			}
+			@media screen and (max-width: 1024px) {
+				height: 150px;
+			}
+			@media screen and (max-width: 580px) {
+				height: 100px;
+			}
+			@media screen and (max-width: 347px) {
+				height: 150px;
+			}
 		}
 	}
+	
 	& .content-block-right {
 		position: relative;
 		z-index: 10;
@@ -29,8 +47,9 @@
 			top: 70px;
 			display: none;
 		}
+		
 		& svg {
-			@media screen and (max-width: 1440px){
+			@media screen and (max-width: 1440px) {
 				width: 570px;
 			}
 			@media screen and (max-width: 1024px) {
@@ -39,33 +58,43 @@
 		}
 	}
 }
+
 .content-block {
 	display: flex;
 	@media screen and (max-width: 1024px) {
 		flex-direction: column;
 	}
+	
 	&-left {
 		width: 50%;
 		position: relative;
 		@media screen and (max-width: 1024px) {
 			width: 100%;
 		}
+		
 		& .title {
 			margin-bottom: 40px;
+			@media screen and (max-width: 1024px) {
+				margin-bottom: 20px;
+			}
 		}
+		
 		& .btn-group {
 			margin-top: 50px;
 		}
 	}
+	
 	&-right {
 		width: 50%;
 		position: relative;
 		@media screen and (max-width: 1024px) {
 			width: 100%;
 		}
+		
 		& .top-block {
 			position: absolute;
 			height: 100%;
+			
 			& svg {
 				position: absolute;
 				top: -640px;
@@ -76,9 +105,11 @@
 				}
 			}
 		}
+		
 		& .mid-block {
 			position: absolute;
 			height: 100%;
+			
 			& svg {
 				position: absolute;
 				top: -70px;
@@ -86,9 +117,11 @@
 				z-index: 10;
 			}
 		}
+		
 		& .bot-block {
 			position: absolute;
 			height: 100%;
+			
 			& svg {
 				position: absolute;
 				bottom: -640px;
@@ -98,50 +131,6 @@
 					left: 0;
 				}
 			}
-		}
-    }
-}
-#f-bg {
-	position: absolute;
-	left: 0;
-	bottom: 20px;
-	display: flex;
-	align-items: end;
-	width: 100%;
-	height: 100%;
-	& .g-p {
-		width: 11px;
-		background: transparent;
-		margin-right: 11px;
-		position: relative;
-		height: 100%;
-		&:after {
-			content: '';
-			position: absolute; bottom: 0; left: 0;
-			width: 100%;
-			background: linear-gradient(208.1deg, #F6F4FF 7.35%, #E5DDFA 79.61%);
-			-webkit-transition: 0.3s;
-			transition: 0.3s;
-		}
-	}
-	& .g-p-1 {
-		&:after {
-			height: 53px;
-		}
-	}
-	& .g-p-2 {
-		&:after {
-			height: 53px;
-		}
-	}
-	& .g-p-3 {
-		&:after {
-			height: 122px;
-		}
-	}
-	& .g-p-4{
-		&:after {
-			height: 240px;
 		}
 	}
 }

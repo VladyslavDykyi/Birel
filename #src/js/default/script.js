@@ -116,4 +116,21 @@ function animate(element, styleName, endValue, time) {
 	}, timePerFrame);
 }
 
-export { animateText,animate };
+function createBg(column , count) {
+	for (let i = 0; i < count; i++) {
+		let divElement = document.createElement('div');
+		divElement.classList.add('g-p');
+		column.appendChild(divElement);
+	}
+	setTimeout(()=>{
+		elems(column);
+	},1000);
+}
+function elems(column) {
+	const box2 = column.querySelectorAll('.g-p');
+	for (let i = 0; i < box2.length; i++) {
+		let string = `g-p-${i}`;
+		box2[i].classList.add(string);
+	}
+}
+export { animateText,animate,createBg };

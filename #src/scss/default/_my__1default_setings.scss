@@ -103,9 +103,13 @@ label {
 	background-color: $white;
 	padding: 150px 0 0;
 	box-sizing: border-box;
+	@media screen and (max-width: 425px) {
+		padding: 100px 0 0;
+	}
 }
 .bg-form {
 	padding: 140px 0;
+	position: relative;
 	background: $gradient-two;
 	@media screen and (max-width: 1024px) {
 		padding: 40px 0;

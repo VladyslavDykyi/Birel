@@ -1,5 +1,6 @@
 .contact {
-	
+	position: relative;
+	z-index: 10;
 	& .content-block-left {
 		& .title {
 			margin-bottom: 150px;

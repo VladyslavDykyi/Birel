@@ -1,0 +1,521 @@
+#f-bg2,
+#f-bg {
+	position: absolute;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	
+	& .g-p {
+		background: transparent;
+		position: relative;
+		//height: 100%;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 0;
+			
+			transition: 2.5s;
+		}
+	}
+}
+
+#f-bg {
+	bottom: 20px;
+	& .g-p {
+		width: 11px;
+		
+		&:after {
+			background: linear-gradient(208.1deg, #F6F4FF 7.35%, #E5DDFA 79.61%);
+		}
+	}
+	
+	& .g-p-0 {
+		&:after {
+			height: 23px;
+		}
+	}
+	
+	& .g-p-1,
+	.g-p-2 {
+		&:after {
+			height: 53px;
+		}
+	}
+	
+	& .g-p-6,
+	.g-p-11 {
+		&:after {
+			height: 80px;
+		}
+	}
+	
+	& .g-p-3 {
+		&:after {
+			height: 122px;
+		}
+	}
+	
+	& .g-p-7 {
+		&:after {
+			height: 136px;
+		}
+	}
+	
+	& .g-p-12 {
+		&:after {
+			height: 165px;
+		}
+	}
+	
+	& .g-p-13,
+	.g-p-23 {
+		&:after {
+			height: 215px;
+		}
+	}
+	
+	& .g-p-24 {
+		&:after {
+			height: 225px;
+		}
+	}
+	
+	& .g-p-25,
+	.g-p-28,
+	.g-p-4 {
+		&:after {
+			height: 236px;
+		}
+	}
+	
+	& .g-p-14 {
+		&:after {
+			height: 265px;
+		}
+	}
+	
+	& .g-p-5,
+	.g-p-10 {
+		&:after {
+			height: 286px;
+		}
+	}
+	
+	& .g-p-8,
+	.g-p-22 {
+		&:after {
+			height: 292px;
+		}
+	}
+	
+	& .g-p-27,
+	.g-p-32 {
+		&:after {
+			height: 311px;
+		}
+	}
+	
+	& .g-p-15 {
+		&:after {
+			height: 321px;
+		}
+	}
+	
+	& .g-p-9,
+	.g-p-21 {
+		&:after {
+			height: 347px;
+		}
+	}
+	
+	& .g-p-16 {
+		&:after {
+			height: 365px;
+		}
+	}
+	
+	& .g-p-17 {
+		&:after {
+			height: 391px;
+		}
+	}
+	
+	& .g-p-20 {
+		&:after {
+			height: 415px;
+		}
+	}
+	
+	& .g-p-18,
+	.g-p-26 {
+		&:after {
+			height: 421px;
+		}
+	}
+	
+	& .g-p-19,
+	.g-p-30 {
+		&:after {
+			height: 437px;
+		}
+	}
+	
+	& .g-p-29 {
+		&:after {
+			height: 542px;
+		}
+	}
+	
+	& .g-p-31 {
+		&:after {
+			height: 700px;
+		}
+	}
+}
+
+#f-bg2 {
+	bottom: 0;
+	& .g-p {
+		width: 7px;
+		
+		&:after {
+			background: #573CDA;
+		}
+	}
+	
+	& .g-p-0 {
+		&:after {
+			height: 35px;
+		}
+	}
+	
+	& .g-p-1 {
+		&:after {
+			height: 35px;
+		}
+	}
+	
+	& .g-p-2 {
+		&:after {
+			height: 79px;
+		}
+	}
+	
+	& .g-p-3 {
+		&:after {
+			height: 154px;
+		}
+	}
+	
+	& .g-p-4 {
+		&:after {
+			height: 186px;
+		}
+	}
+	
+	& .g-p-5 {
+		&:after {
+			height: 50px;
+		}
+	}
+	
+	& .g-p-6 {
+		&:after {
+			height: 89px;
+		}
+	}
+	
+	& .g-p-7 {
+		&:after {
+			height: 190px;
+		}
+	}
+	
+	& .g-p-8 {
+		&:after {
+			height: 225px;
+		}
+	}
+	
+	& .g-p-9 {
+		&:after {
+			height: 187px;
+		}
+	}
+	
+	& .g-p-10 {
+		&:after {
+			height: 50px;
+		}
+	}
+	
+	& .g-p-11 {
+		&:after {
+			height: 107px;
+		}
+	}
+	
+	& .g-p-12 {
+		&:after {
+			height: 139px;
+		}
+	}
+	
+	& .g-p-13 {
+		&:after {
+			height: 171px;
+		}
+	}
+	
+	& .g-p-14 {
+		&:after {
+			height: 208px;
+		}
+	}
+	
+	& .g-p-15 {
+		&:after {
+			height: 236px;
+		}
+	}
+	
+	& .g-p-16 {
+		&:after {
+			height: 253px;
+		}
+	}
+	
+	& .g-p-17 {
+		&:after {
+			height: 273px;
+		}
+	}
+	
+	& .g-p-18 {
+		&:after {
+			height: 284px;
+		}
+	}
+	
+	& .g-p-19 {
+		&:after {
+			height: 269px;
+		}
+	}
+	
+	& .g-p-20 {
+		&:after {
+			height: 225px;
+		}
+	}
+	
+	& .g-p-21 {
+		&:after {
+			height: 190px;
+		}
+	}
+	& .g-p-22 {
+		&:after {
+			height: 139px;
+		}
+	}
+	& .g-p-23 {
+		&:after {
+			height: 145px;
+		}
+	}
+	& .g-p-24 {
+		&:after {
+			height: 153px;
+		}
+	}
+	& .g-p-25 {
+		&:after {
+			height: 276px;
+		}
+	}
+	& .g-p-26 {
+		&:after {
+			height: 202px;
+		}
+	}
+	& .g-p-27 {
+		&:after {
+			height: 153px;
+		}
+	}
+	& .g-p-28 {
+		&:after {
+			height: 352px;
+		}
+	}
+	& .g-p-29 {
+		&:after {
+			height: 284px;
+		}
+	}
+	& .g-p-30 {
+		&:after {
+			height: 454px;
+		}
+	}
+	& .g-p-31 {
+		&:after {
+			height: 202px;
+		}
+	}
+	& .g-p-32 {
+		&:after {
+			height: 79px;
+		}
+	}
+	& .g-p-33 {
+		&:after {
+			height: 154px;
+		}
+	}
+	& .g-p-34 {
+		&:after {
+			height: 186px;
+		}
+	}
+	& .g-p-35 {
+		&:after {
+			height: 50px;
+		}
+	}
+	& .g-p-36 {
+		&:after {
+			height: 89px;
+		}
+	}
+	& .g-p-37 {
+		&:after {
+			height: 190px;
+		}
+	}
+	& .g-p-38 {
+		&:after {
+			height: 225px;
+		}
+	}
+	& .g-p-39 {
+		&:after {
+			height: 186px;
+		}
+	}
+	& .g-p-40 {
+		&:after {
+			height: 50px;
+		}
+	}
+	& .g-p-41 {
+		&:after {
+			height: 107px;
+		}
+	}
+	& .g-p-42 {
+		&:after {
+			height: 139px;
+		}
+	}
+	& .g-p-43 {
+		&:after {
+			height: 171px;
+		}
+	}
+	& .g-p-44 {
+		&:after {
+			height: 208px;
+		}
+	}
+	& .g-p-45 {
+		&:after {
+			height: 236px;
+		}
+	}
+	& .g-p-46 {
+		&:after {
+			height: 253px;
+		}
+	}
+	& .g-p-47 {
+		&:after {
+			height: 273px;
+		}
+	}
+	& .g-p-48 {
+		&:after {
+			height: 284px;
+		}
+	}
+	& .g-p-49 {
+		&:after {
+			height: 269px;
+		}
+	}
+	& .g-p-50 {
+		&:after {
+			height: 225px;
+		}
+	}
+	& .g-p-51 {
+		&:after {
+			height: 190px;
+		}
+	}
+	& .g-p-52 {
+		&:after {
+			height: 139px;
+		}
+	}
+	& .g-p-53 {
+		&:after {
+			height: 145px;
+		}
+	}
+	& .g-p-54 {
+		&:after {
+			height: 153px;
+		}
+	}
+	& .g-p-55 {
+		&:after {
+			height: 276px;
+		}
+	}
+	& .g-p-56 {
+		&:after {
+			height: 202px;
+		}
+	}
+	& .g-p-57 {
+		&:after {
+			height: 153px;
+		}
+	}
+	& .g-p-58 {
+		&:after {
+			height: 352px;
+		}
+	}
+	& .g-p-59 {
+		&:after {
+			height: 284px;
+		}
+	}
+	& .g-p-60 {
+		&:after {
+			height: 454px;
+		}
+	}
+	& .g-p-61 {
+		&:after {
+			height: 202px;
+		}
+	}
+}
