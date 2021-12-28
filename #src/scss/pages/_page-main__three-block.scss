@@ -12,7 +12,9 @@
 	& .content-block-right {
 		background-image: url("../../img/bg-3.svg");
 		background-repeat: no-repeat;
-		
+		background-attachment: fixed;
+		background-size: 50%;
+		background-position: right;
 		& .img-candels {
 			width: 410px;
 			margin: 0 auto;

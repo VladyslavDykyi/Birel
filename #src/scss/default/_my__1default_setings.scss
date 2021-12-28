@@ -101,11 +101,8 @@ label {
 /*---контейнер сайта ---*/
 .bg-site {
 	background-color: $white;
-	padding: 320px 0 0;
+	padding: 150px 0 0;
 	box-sizing: border-box;
-	@media screen and (max-width: 1024px) {
-		padding: 150px 0 0;
-	}
 }
 .bg-form {
 	padding: 140px 0;

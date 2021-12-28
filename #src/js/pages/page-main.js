@@ -6,9 +6,9 @@ animateText(box, str, 3000);
 const box2 = document.querySelector('.top-block svg');
 const box3 = document.querySelector('.mid-block svg');
 const box4 = document.querySelector('.bot-block svg');
-animate(box2, 'top', '-140px', 3000);
-animate(box3, 'left', '0px', 3000);
-animate(box4, 'bottom', '-140px', 3000);
+animate(box2, 'top', '-140px', 2000);
+animate(box3, 'left', '0px', 2000);
+animate(box4, 'bottom', '-140px', 2000);
 
 
 
@@ -24,4 +24,14 @@ function dropDown() {
 }
 
 
+// const boxBg = document.getElementById('f-bg');
+function createBg() {
+	const elements = document.querySelectorAll('.g-p');
+	console.log(elements);
+	for( let i = 0 ; i > elements.length ; i++ ) {
+		elements.
+	}
+}
+
+createBg();
 
