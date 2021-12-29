@@ -1,4 +1,4 @@
-import {animate, animateText,createBg} from "../default/script.js";
+import {animate, animateText, createBg} from "../default/script.js";
 
 const box = document.querySelector('h1.title');
 
@@ -14,30 +14,29 @@ const widthW = window.screen.width;
 
 const btnMenu = document.getElementById('menu');
 
+window.addEventListener('scroll', showVisible);
+
+btnMenu.addEventListener('click', dropDown);
+
 animateText(box, str, 3000);
 
 animate(box2, 'top', '-140px', 2000);
 animate(box3, 'left', '0px', 2000);
 
-if( widthW > 1440) {
+if (widthW > 1440) {
 	animate(box4, 'bottom', '-140px', 2000);
-} else if ( widthW > 1024) {
 	createBg(column, 33);
-	createBg(column2, 62);
+} else if (widthW > 1024) {
+	createBg(column, 33);
 	animate(box4, 'bottom', '-20px', 2000);
-} else if( widthW > 768) {
+} else if (widthW > 768) {
 	createBg(column, 23);
-	createBg(column2, 45);
-} else if( widthW > 450) {
+} else if (widthW > 450) {
 	createBg(column, 15);
-	createBg(column2, 30);
 } else {
 	createBg(column, 10);
-	createBg(column2, 24);
 }
 
-
-btnMenu.addEventListener('click', dropDown);
 
 function dropDown() {
 	let menu = document.querySelector('.drop-down');
@@ -45,6 +44,39 @@ function dropDown() {
 	btnMenu.classList.toggle('active');
 	document.body.classList.toggle('lock');
 }
+
+function isVisible(elem) {
+
+	let coords = elem.getBoundingClientRect();
+
+	let windowHeight = document.documentElement.clientHeight;
+
+	let topVisible = coords.top > 0 && coords.top < windowHeight;
+	let bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
+
+	return topVisible || bottomVisible;
+}
+
+function showVisible() {
+	let elem = document.querySelector('#f-bg2')
+
+	if (isVisible(elem)) {
+		if (widthW > 1440) {
+			createBg(column2, 62);
+		} else if (widthW > 1024) {
+			createBg(column2, 62);
+		} else if (widthW > 768) {
+			createBg(column2, 45);
+		} else if (widthW > 450) {
+			createBg(column2, 30);
+		} else {
+			createBg(column2, 24);
+		}
+		window.removeEventListener('scroll', showVisible);
+	}
+}
+
+showVisible();
 
 
 

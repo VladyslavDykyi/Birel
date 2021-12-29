@@ -1,6 +1,7 @@
 .investor {
 	margin-top: 150px;
-	@media screen and (max-width: 768px) {
+	
+	@media screen and (max-width: 1024px) {
 		margin-top: 50px;
 	}
 	& .content-block-left {
@@ -9,9 +10,6 @@
 		flex-direction: column;
 		justify-content: center;
 		@media screen and (max-width: 1024px) {
-			padding: 100px 0;
-		}
-		@media screen and (max-width: 768px) {
 			padding: 50px 0;
 		}
 		& .t-r {

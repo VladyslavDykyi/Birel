@@ -31,6 +31,10 @@ $WS-sb:"WorkSans-SemiBold";
 * {
 	box-sizing: border-box;
 }
+*:after,
+*:before {
+	transition: all 0.2s linear;
+}
 textarea,
 input,
 a,
