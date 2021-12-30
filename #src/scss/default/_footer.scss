@@ -10,9 +10,9 @@
 	grid-template-areas:
 			"logo nav1 nav2 mail"
 			"copyright nav1 nav2 mail";
-	grid-template-columns: 20% 20% 20% 20%;
+	grid-template-columns: 23% 23% 23% 23%;
 	grid-template-rows: 50%;
-	grid-gap: 6.66667%;
+	grid-gap: 2.66667%;
 	@media screen and (max-width: 580px) {
 		grid-template-areas:
 			"logo nav2"
@@ -22,7 +22,7 @@
 		grid-template-rows: 50%;
 		grid-gap: 4%;
 	}
-	@media screen and (max-width: 425px) {
+	@media screen and (max-width: 450px) {
 		grid-template-areas:
 			"logo logo"
 			"nav1 nav2"
@@ -42,7 +42,7 @@
 	@media screen and (max-width: 580px) {
 		margin-left: 30px;
 	}
-	@media screen and (max-width: 425px) {
+	@media screen and (max-width: 450px) {
 		margin-left: 0;
 		flex-direction: row;
 	}
@@ -54,7 +54,7 @@
 			margin-top: 20px;
 			margin-left: 0;
 		}
-		@media screen and (max-width: 425px) {
+		@media screen and (max-width: 450px) {
 			margin-top: 0;
 			margin-left: 88px;
 		}
@@ -78,7 +78,7 @@
 	@media screen and (max-width: 580px) {
 		margin-left: 30px;
 	}
-	@media screen and (max-width: 425px) {
+	@media screen and (max-width: 450px) {
 		margin-left: 0;
 	}
 }
@@ -103,10 +103,13 @@
 	grid-area: mail;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
-	@media screen and (max-width: 580px) {
-		align-items: flex-start;
-	}
+	align-items: flex-start;
+	//@media screen and (max-width: 580px) {
+	//	align-items: flex-start;
+	//}
+	//@media screen and (max-width: 450px) {
+	//	align-items: flex-start;
+	//}
 	& form {
 		margin-bottom: 20px;
 		border-bottom: 1px solid $grey;
@@ -118,6 +121,9 @@
 			align-items: center;
 			& .i-f {
 				border-bottom: none;
+			}
+			& .reset-btn i:before {
+				color: $white;
 			}
 		}
 	}

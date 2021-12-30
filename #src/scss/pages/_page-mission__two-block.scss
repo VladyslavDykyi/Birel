@@ -1,6 +1,18 @@
+.work {
+	margin-bottom: 130px;
+	@media screen and (max-width: 768px) {
+		margin-bottom: 50px;
+	}
+	& .content-block-left {
+
+	}
+	& .content-block-right {
+
+	}
+}
 .content-block {
 	display: flex;
-	margin-bottom: 130px;
+	
 	@media screen and (max-width: 1024px) {
 		flex-direction: column;
 	}
@@ -9,6 +21,19 @@
 		position: relative;
 		@media screen and (max-width: 1024px) {
 			width: 100%;
+		}
+		@media screen and (max-width: 768px) {
+			display: flex;
+			justify-content: center;
+		}
+		& img {
+			width: 500px;
+			@media screen and (max-width: 1024px) {
+				width: 400px;
+			}
+			@media screen and (max-width: 425px) {
+				width: 100%;
+			}
 		}
 	}
 	&-right {
