@@ -129,4 +129,9 @@ label {
 	overflow-x: hidden;
 	overflow-y: visible;
 	width: 100%;
+	scrollbar-width: none;
+	&::-webkit-scrollbar { /* webkit */
+		width: 0;
+		height: 0;
+	}
 }
