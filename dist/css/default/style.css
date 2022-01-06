@@ -286,6 +286,12 @@ label {
   font-weight: 600;
 }
 
+.normal-visible {
+  overflow-x: hidden;
+  overflow-y: visible;
+  width: 100%;
+}
+
 .btn-group {
   display: -webkit-box;
   display: -ms-flexbox;

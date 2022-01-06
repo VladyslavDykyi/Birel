@@ -117,6 +117,10 @@
   margin-top: 70px;
 }
 
+.mission .content-block-right {
+  margin-left: -100px;
+}
+
 .mission .content-block-right .bg-lattice {
   display: block;
   position: relative;
@@ -151,7 +155,7 @@
 
 .mission .content-block-right:after {
   content: '';
-  width: 56%;
+  width: 66%;
   height: 100%;
   z-index: 10;
   position: absolute;
@@ -306,6 +310,16 @@
   margin-left: auto;
 }
 
+@media screen and (max-width: 1680px) {
+  .birel {
+    padding: 80px 0 60px;
+  }
+
+  .birel .content-block-left h1 {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   .birel .content-block-left {
     width: 40%;
@@ -322,6 +336,15 @@
 
   .birel .content-block-right svg {
     width: 570px;
+  }
+
+  .mission .content-block-right {
+    margin-left: 0;
+  }
+
+  .mission .content-block-right .bg-lattice {
+    padding-bottom: 80%;
+    margin-left: -50px;
   }
 }
 

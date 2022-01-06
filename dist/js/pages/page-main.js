@@ -1,4 +1,4 @@
-import {animate, animateText, createBg,isVisible,dropDown} from "../default/script.js";
+import {animate, animateText, createBg,isVisible} from "../default/script.js";
 
 const box = document.querySelector('h1.title');
 
@@ -12,20 +12,21 @@ const column2 = document.getElementById('f-bg2');
 const str = 'birel makes private equity liquid';
 const widthW = window.screen.width;
 
-const btnMenu = document.getElementById('menu');
 
 window.addEventListener('scroll', showVisible);
 
-btnMenu.addEventListener('click', dropDown);
+
 
 animateText(box, str, 3000);
 
 animate(box2, 'top', '-140px', 2000);
 animate(box3, 'left', '0px', 2000);
-
-if (widthW > 1440) {
-	animate(box4, 'bottom', '-140px', 2000);
+if (widthW > 1680) {
 	createBg(column, 33);
+	animate(box4, 'bottom', '-140px', 2000);
+} else if (widthW > 1440) {
+	createBg(column, 33);
+	animate(box4, 'bottom', '0px', 2000);
 } else if (widthW > 1024) {
 	createBg(column, 33);
 	animate(box4, 'bottom', '-20px', 2000);

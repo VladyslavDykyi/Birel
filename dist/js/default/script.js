@@ -148,10 +148,11 @@ function isVisible(elem) {
 }
 
 
-function dropDown() {
-	let menu = document.querySelector('.drop-down');
-	menu.classList.toggle('active');
-	btnMenu.classList.toggle('active');
-	document.body.classList.toggle('lock');
-}
-export { animateText,animate,createBg,isVisible,dropDown };
+// function dropDown() {
+// 	let menu = document.querySelector('.drop-down');
+// 	let btnMenu = document.querySelector('.drop-down');
+// 	menu.classList.toggle('active');
+// 	btnMenu.classList.toggle('active');
+// 	document.body.classList.toggle('lock');
+// }
+export { animateText,animate,createBg,isVisible };

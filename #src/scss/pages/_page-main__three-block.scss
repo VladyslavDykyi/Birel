@@ -9,6 +9,10 @@
 	}
 	
 	& .content-block-right {
+		margin-left: -100px;
+		@media screen and (max-width: 1440px){
+			margin-left: 0;
+		}
 		@media screen and (max-width: 1280px){
 			display: flex;
 			justify-content: flex-start;
@@ -30,7 +34,10 @@
 			transform: skewX(-35deg) translatez(1px);
 			z-index: 1;
 			overflow: hidden;
-			
+			@media screen and (max-width: 1440px) {
+				padding-bottom: 80%;
+				margin-left: -50px;
+			}
 			&:before {
 				content: '';
 				position: absolute;
@@ -50,7 +57,7 @@
 		
 		&:after {
 			content: '';
-			width: 56%;
+			width: 66%;
 			height: 100%;
 			//transform: skewX(-45deg);
 			z-index: 10;
