@@ -1,0 +1,21 @@
+.content-text {
+	margin-top: 150px;
+	display: flex;
+	flex-direction: column;
+	@media screen and (max-width: 768px) {
+		//justify-content: center;
+	}
+	& .title {
+		width: 32%;
+		margin-bottom: 25px;
+	}
+	& .title + p {
+		margin-bottom: 35px;
+	}
+	& p {
+		width: 64.5%;
+		@media screen and (max-width: 768px) {
+			width: 100%;
+		}
+	}
+}

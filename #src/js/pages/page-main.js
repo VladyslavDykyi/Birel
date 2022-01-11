@@ -17,7 +17,7 @@ window.addEventListener('scroll', showVisible);
 
 
 
-animateText(box, str, 3000);
+animateText(box, str, 2000);
 
 animate(box2, 'top', '-140px', 2000);
 animate(box3, 'left', '0px', 2000);

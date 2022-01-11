@@ -290,6 +290,13 @@ label {
   overflow-x: hidden;
   overflow-y: visible;
   width: 100%;
+  scrollbar-width: none;
+}
+
+.normal-visible::-webkit-scrollbar {
+  /* webkit */
+  width: 0;
+  height: 0;
 }
 
 .btn-group {
@@ -1555,6 +1562,10 @@ label {
 }
 
 @media screen and (max-width: 450px) {
+  body.lock {
+    overflow: hidden;
+  }
+
   .footer-grid {
     grid-template-areas: "logo logo" "nav1 nav2" "mail mail" "copyright copyright";
     grid-template-columns: 41% 49%;
@@ -1581,10 +1592,6 @@ label {
 }
 
 @media screen and (max-width: 425px) {
-  body.lock {
-    overflow: hidden;
-  }
-
   .bg-site {
     padding: 100px 0 0;
   }

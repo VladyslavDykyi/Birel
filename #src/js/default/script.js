@@ -88,6 +88,15 @@ function addGreenLine(elem) {
 		if (textArr[i]== 'flexible') {
 			textArr[i] = `<span>${textArr[i]}</span>`;
 		}
+		if (textArr[i]== 'how') {
+			textArr[i] = `<span>${textArr[i]}</span>`;
+		}
+		if (textArr[i]== 'birel') {
+			textArr[i] = `<span>${textArr[i]}</span>`;
+		}
+		if (textArr[i]== 'helps') {
+			textArr[i] = `<span>${textArr[i]}</span>`;
+		}
 	}
 	elem.innerHTML = textArr.join(' ');
 }
@@ -146,13 +155,4 @@ function isVisible(elem) {
 
 	return topVisible || bottomVisible;
 }
-
-
-// function dropDown() {
-// 	let menu = document.querySelector('.drop-down');
-// 	let btnMenu = document.querySelector('.drop-down');
-// 	menu.classList.toggle('active');
-// 	btnMenu.classList.toggle('active');
-// 	document.body.classList.toggle('lock');
-// }
 export { animateText,animate,createBg,isVisible };
