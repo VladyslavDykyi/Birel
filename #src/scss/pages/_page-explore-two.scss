@@ -38,8 +38,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		@media screen and (max-width: 768px) {
-			//justify-content: center;
+		@media screen and (max-width: 490px) {
+			justify-content: center;
 		}
 	}
 	&-search {
@@ -62,7 +62,7 @@
 				padding: 83px 66px;
 			}
 			@media screen and (max-width: 580px) {
-				padding: 83px 34px;
+				padding: 59px 34px;
 			}
 		}
 	}
@@ -86,7 +86,7 @@
 				padding: 72px 88px;
 			}
 			@media screen and (max-width: 580px) {
-				padding: 72px 52px;
+				padding: 64px 52px;
 			}
 		}
 	}
@@ -111,7 +111,7 @@
 				padding: 62px 66px;
 			}
 			@media screen and (max-width: 580px) {
-				padding: 62px 34px;
+				padding: 55px 34px;
 			}
 		}
 	}

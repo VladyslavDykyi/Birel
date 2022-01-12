@@ -137,6 +137,10 @@
     margin-bottom: 50px;
   }
 
+  .content-block-grid .content-block-title p {
+    margin-right: 0;
+  }
+
   .content-block-grid .content-block-text p {
     width: 100%;
   }
