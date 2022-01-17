@@ -478,6 +478,10 @@ label {
   border-color: #573CDA;
 }
 
+.w100p {
+  width: 100%;
+}
+
 .w140 {
   width: 140px;
 }
@@ -1113,6 +1117,11 @@ label {
 .f12-l18 {
   font-size: 12px;
   line-height: 18px;
+}
+
+.f14-l16 {
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .f18-l32 {
