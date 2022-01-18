@@ -2,7 +2,7 @@
   padding: 0;
 }
 
-.bg-registration {
+.bg-login {
   background-color: #573CDA;
   height: calc(100vh - 276px);
   display: -webkit-box;
@@ -14,56 +14,56 @@
   padding: 150px 0 24px;
 }
 
-.registration {
+.login {
   background-color: #fff;
   padding: 50px;
   width: 365px;
   margin: 0 auto;
 }
 
-.registration-title {
+.login-title {
   margin-bottom: 50px;
 }
 
-.registration a:hover {
+.login a:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
 
-.registration-form-box {
+.login-form-box {
   margin-bottom: 50px;
   position: relative;
 }
 
-.registration-form-box a {
+.login-form-box a {
   position: absolute;
   right: 0;
   top: calc(50% - 8px);
   z-index: 10;
 }
 
-.registration-form-box:first-child,
-.registration-form-box:last-child {
+.login-form-box:first-child,
+.login-form-box:last-child {
   margin-bottom: 20px;
 }
 
-.registration-text {
+.login-text {
   text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
-  .bg-registration {
+  .bg-login {
     height: calc(100vh - 340px);
   }
 }
 
 @media screen and (max-width: 425px) {
-  .registration {
+  .login {
     padding: 25px 20px;
     width: 100%;
   }
 
-  .registration-title {
+  .login-title {
     font-size: 22px;
   }
 }

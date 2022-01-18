@@ -28,7 +28,7 @@ $WS-sb: "WorkSans-SemiBold";
 .bg-site {
 	padding: 0;
 }
-.bg-registration {
+.bg-login {
 	background-color: $purple;
 	height: calc(100vh - 276px);
 	display: flex;
@@ -39,7 +39,7 @@ $WS-sb: "WorkSans-SemiBold";
 	}
 }
 
-.registration {
+.login {
 	background-color: $white;
 	padding: 50px;
 	width: 365px;

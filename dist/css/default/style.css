@@ -490,6 +490,92 @@ label {
   width: 170px;
 }
 
+.w265 {
+  width: 265px;
+}
+
+/* Option */
+
+.option {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/* Check */
+
+.check {
+  padding-left: 30px;
+}
+
+.check .text-r:hover {
+  cursor: pointer;
+}
+
+.check span:hover {
+  cursor: pointer;
+}
+
+.check input:hover {
+  cursor: pointer;
+}
+
+.check__input {
+  position: absolute;
+  width: 1px !important;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.check__box {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: calc(50% - 12px);
+  overflow: hidden;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  outline: none;
+  border: 0;
+}
+
+.check__box:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 2px;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  top: calc(50% - 9px);
+  background-color: #C0BCD6;
+}
+
+/* Checked */
+
+.check__input:checked + .check__box:before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  z-index: 10;
+  left: 3px;
+  top: calc(50% - 9px);
+  opacity: 1;
+  background-size: 79%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Fcheck.svg?1550563475518);
+}
+
+/* Focused */
+
+/* Disabled */
+
 #f-bg3,
 #f-bg2,
 #f-bg {
@@ -1001,6 +1087,24 @@ label {
 
 #f-bg3 .g-p-19:after {
   height: 337px;
+}
+
+.icon-eye-grey:after {
+  content: '';
+  display: block;
+  width: 21px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.75 6.99984C0.75 6.99984 3.75 1.6665 9 1.6665C14.25 1.6665 17.25 6.99984 17.25 6.99984C17.25 6.99984 14.25 12.3332 9 12.3332C3.75 12.3332 0.75 6.99984 0.75 6.99984Z' stroke='%23C0BCD6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M9 8.99984C10.2426 8.99984 11.25 8.10441 11.25 6.99984C11.25 5.89527 10.2426 4.99984 9 4.99984C7.75736 4.99984 6.75 5.89527 6.75 6.99984C6.75 8.10441 7.75736 8.99984 9 8.99984Z' stroke='%23C0BCD6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+}
+
+.icon-eye-green:after {
+  content: '';
+  display: block;
+  width: 21px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.75 7.00033C0.75 7.00033 3.75 1.66699 9 1.66699C14.25 1.66699 17.25 7.00033 17.25 7.00033C17.25 7.00033 14.25 12.3337 9 12.3337C3.75 12.3337 0.75 7.00033 0.75 7.00033Z' stroke='%231BC082' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M9 9.00033C10.2426 9.00033 11.25 8.10489 11.25 7.00033C11.25 5.89576 10.2426 5.00033 9 5.00033C7.75736 5.00033 6.75 5.89576 6.75 7.00033C6.75 8.10489 7.75736 9.00033 9 9.00033Z' stroke='%231BC082' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
 }
 
 .i-f {
