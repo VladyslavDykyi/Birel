@@ -65,8 +65,18 @@
 		color: $white;
 		&:disabled {
 			opacity: 0.5;
+			background: $green;
+			border: 1px solid $green;
+			color: $white;
 			&:hover {
-			
+				background: $green;
+				border-color: $green;
+				color: $white;
+			}
+			&:active {
+				background: $green;
+				border-color: $green;
+				color: $white;
 			}
 		}
 		&:hover {
@@ -112,8 +122,17 @@
 		color:  $green;
 		&:disabled {
 			opacity: 0.5;
+			background: $white;
+			border: 1px solid $green;
+			color:  $green;
 			&:hover {
-			
+				background: $white;
+				color:  $green;
+				border-color: $green;
+			}
+			&:active {
+				background: $green;
+				color:  $green;
 			}
 		}
 		&:hover {
