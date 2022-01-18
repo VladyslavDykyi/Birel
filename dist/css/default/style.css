@@ -393,6 +393,21 @@ label {
 
 .btn-green:disabled {
   opacity: 0.5;
+  background: #1BC082;
+  border: 1px solid #1BC082;
+  color: #fff;
+}
+
+.btn-green:disabled:hover {
+  background: #1BC082;
+  border-color: #1BC082;
+  color: #fff;
+}
+
+.btn-green:disabled:active {
+  background: #1BC082;
+  border-color: #1BC082;
+  color: #fff;
 }
 
 .btn-green:hover {
@@ -451,6 +466,20 @@ label {
 
 .btn2-green:disabled {
   opacity: 0.5;
+  background: #fff;
+  border: 1px solid #1BC082;
+  color: #1BC082;
+}
+
+.btn2-green:disabled:hover {
+  background: #fff;
+  color: #1BC082;
+  border-color: #1BC082;
+}
+
+.btn2-green:disabled:active {
+  background: #1BC082;
+  color: #1BC082;
 }
 
 .btn2-green:hover {
