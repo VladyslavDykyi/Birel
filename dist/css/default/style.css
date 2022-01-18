@@ -355,6 +355,21 @@ label {
   color: #fff;
 }
 
+.btn:disabled {
+  opacity: 0.5;
+}
+
+.btn:disabled:hover {
+  background: #573CDA;
+  color: #fff;
+  border-color: #573CDA;
+}
+
+.btn:disabled:active {
+  background: #573CDA;
+  color: #fff;
+}
+
 .btn::first-letter {
   text-transform: uppercase;
 }
@@ -374,6 +389,10 @@ label {
   background: #1BC082;
   border: 1px solid #1BC082;
   color: #fff;
+}
+
+.btn-green:disabled {
+  opacity: 0.5;
 }
 
 .btn-green:hover {
@@ -430,6 +449,10 @@ label {
   color: #1BC082;
 }
 
+.btn2-green:disabled {
+  opacity: 0.5;
+}
+
 .btn2-green:hover {
   background: #23C89A;
   color: #fff;
@@ -462,6 +485,10 @@ label {
       -ms-flex-align: center;
           align-items: center;
   grid-gap: 10px;
+}
+
+.btn3:disabled {
+  opacity: 0.5;
 }
 
 .btn3::first-letter {

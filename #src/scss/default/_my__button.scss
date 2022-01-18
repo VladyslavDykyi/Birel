@@ -35,6 +35,18 @@
 	justify-content: center;
 	align-items: center;
 	color: $white;
+	&:disabled {
+		opacity: 0.5;
+		&:hover {
+			background: $purple;
+			color: $white;
+			border-color: $purple;
+		}
+		&:active {
+			background: $purple;
+			color: $white;
+		}
+	}
 	&::first-letter {
 		text-transform: uppercase;
 	}
@@ -51,6 +63,12 @@
 		background: $green;
 		border: 1px solid $green;
 		color: $white;
+		&:disabled {
+			opacity: 0.5;
+			&:hover {
+			
+			}
+		}
 		&:hover {
 			background: $white;
 			color: $green-hover;
@@ -92,6 +110,12 @@
 		background: $white;
 		border: 1px solid $green;
 		color:  $green;
+		&:disabled {
+			opacity: 0.5;
+			&:hover {
+			
+			}
+		}
 		&:hover {
 			background:  $green-hover;
 			color: $white;
@@ -118,6 +142,12 @@
 	justify-content: center;
 	align-items: center;
 	grid-gap: 10px;
+	&:disabled {
+		opacity: 0.5;
+		&:hover {
+		
+		}
+	}
 	&::first-letter {
 		text-transform: uppercase;
 	}
@@ -142,3 +172,4 @@
 .w265 {
 	width: 265px;
 }
+

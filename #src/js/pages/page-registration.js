@@ -13,5 +13,16 @@ activeBtnPassword.forEach(item=> {
 		}
 	});
 });
-console.log(activeBtnPassword);
+const privacyPolicy = document.querySelectorAll('.privacy-policy');
+privacyPolicy.forEach(item => {
+	item.onchange = () => {
+	let btn = item.parentElement
+			.parentElement
+			.parentElement
+			.parentElement
+			.lastElementChild
+			.firstElementChild;
+		btn.disabled = !btn.disabled;
+	}
+});
 
