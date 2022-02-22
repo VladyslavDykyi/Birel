@@ -1,10 +1,6 @@
 .content-text {
-	margin-top: 150px;
 	display: flex;
 	flex-direction: column;
-	@media screen and (max-width: 768px) {
-		margin-top: 0;
-	}
 	& .title {
 		width: 32%;
 		height: 140px;
