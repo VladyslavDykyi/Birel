@@ -34,6 +34,9 @@ $WS-sb: "WorkSans-SemiBold";
 	display: flex;
 	align-items: center;
 	padding: 150px 0 24px;
+	@media screen and (max-height: 900px) {
+		height: auto;
+	}
 	@media screen and (max-width: 1024px) {
 		height: calc(100vh - 340px);
 	}
