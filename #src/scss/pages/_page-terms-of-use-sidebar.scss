@@ -1,0 +1,54 @@
+.sidebar-tou {
+	flex-shrink: 3;
+	width: 100%;
+	max-width: 450px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	@media screen and (max-width: 1024px) {
+		flex-shrink: 2;
+	}
+	&-wrapper {
+		@media screen and (max-width: 1440px) {
+			width: 100%;
+		}
+		
+	}
+	& h2 {
+		opacity: 0.7;
+	}
+	&-nav {
+		margin-top: 15px;
+	}
+	&-list {
+	
+	}
+	&-item {
+		margin-bottom: 10px;
+		position: relative;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&.active {
+			padding-left: 20px;
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: calc(50% - 5px);
+				display: block;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: $green;
+			}
+			& > .sidebar-tou-link {
+				font-weight: 600;
+			}
+		}
+	}
+	&-link {
+	
+	}
+}

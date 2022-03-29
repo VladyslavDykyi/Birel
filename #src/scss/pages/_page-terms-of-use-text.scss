@@ -1,0 +1,23 @@
+.text-tou {
+	max-width: 1100px;
+	width: 100%;
+	margin-bottom: 150px;
+	@media screen and (max-width: 768px) {
+		margin-bottom: 30px;
+	}
+	& h1, h2, h4, p {
+		text-transform: capitalize;
+	}
+	& h2 {
+		color: rgba(81, 89, 148, 0.5);
+		margin: 30px 0 20px;
+	}
+	& h4 {
+		margin: 10px 0 20px;
+	}
+	& p {
+		@media screen and (max-width: 590px) {
+			text-align: justify;
+		}
+	}
+}
