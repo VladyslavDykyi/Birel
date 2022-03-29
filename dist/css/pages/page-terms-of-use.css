@@ -83,6 +83,10 @@
   margin: 10px 0 20px;
 }
 
+.text-tou p strong {
+  font-weight: 600;
+}
+
 @media screen and (max-width: 1440px) {
   .sidebar-tou-wrapper {
     width: 100%;

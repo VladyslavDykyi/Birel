@@ -19,5 +19,8 @@
 		@media screen and (max-width: 590px) {
 			text-align: justify;
 		}
+		& strong {
+			font-weight: 600;
+		}
 	}
 }
