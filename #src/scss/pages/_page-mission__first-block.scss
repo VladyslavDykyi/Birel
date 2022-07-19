@@ -1,83 +1,45 @@
-.content-block-grid {
-	display: grid;
-	grid-template-areas:
-        "title img"
-        "text text";
-	grid-template-columns: 50% 50%;
-	margin-bottom: 120px;
-	@media screen and (max-width: 1024px) {
-		margin-bottom: 80px;
-	}
-	@media screen and (max-width: 768px) {
-		grid-template-areas:
-        "title"
-        "img"
-        "text";
-		grid-template-columns: 100%;
-		margin-bottom: 50px;
-	}
-	@media screen and (max-width: 425px) {
-	
-	}
-	& .content-block-title {
-		position: relative;
-		z-index: 1;
-		grid-area: title;
-		& h1 {
-			width: 61%;
-			height: 140px;
-			margin-bottom: 25px;
-			@media screen and (max-width: 1440px) {
-				width: 100%;
-			}
-			@media screen and (max-width: 580px) {
-				height: 110px;
-				font-size: 42px;
-				line-height: 52px;
-			}
-		}
-		& p {
-			margin-right: 20px;
-			@media screen and (max-width: 768px) {
-				margin-right: 0;
-			}
-		}
-	}
-	& .content-block-img {
-		grid-area: img;
-		display: flex;
-		justify-content: center;
-		position: relative;
-		z-index: 1;
-		& img {
-			width: 500px;
-			@media screen and (max-width: 1024px) {
-				width: 400px;
-			}
-			@media screen and (max-width: 425px) {
-				width: 100%;
-			}
-		}
-	}
-	& .content-block-text {
-		grid-area: text;
-		display: flex;
-		justify-content: center;
-		padding: 20px 0;
+.content-block {
+	&.f {
+		margin-top: 100px;
 		@media screen and (max-width: 1024px) {
-			padding: 50px 0 10px;
+			margin-top: 0;
 		}
-		& div {
+	}
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+		@media screen and (max-width: 1024px) {
+			flex-direction: column;
+		}
+	}
+	&-title {
+		width: 40%;
+		max-width: 520px;
+		@media screen and (max-width: 1024px) {
+			width: 100%;
+			max-width: 100%;
 			position: relative;
-			bottom: -20px;
+		}
+		& h1 {
+			margin-bottom: 55px;
 		}
 		& p {
-			width: 50%;
-			position: relative;
-			z-index: 1;
 			@media screen and (max-width: 768px) {
-				width: 100%;
+				text-align: justify;
+				font-size: 18px;
 			}
+		}
+	}
+	&-img  {
+		width: 60%;
+		max-width: 920px;
+		@media screen and (max-width: 1024px) {
+			width: 100%;
+			max-width: 100%;
+		}
+		& svg {
+			width: 100%;
+			height: auto;
 		}
 	}
 }

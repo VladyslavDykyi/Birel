@@ -1,26 +1,95 @@
 .text-tou {
-	max-width: 1100px;
+	max-width: 1000px;
 	width: 100%;
 	margin-bottom: 150px;
 	@media screen and (max-width: 768px) {
 		margin-bottom: 30px;
 	}
-	& h1, h2, h4, p {
-		text-transform: capitalize;
+	& h1 {
+		font-family: $WS-sb;
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 42px;
+		color: #573CDA;
+		margin-bottom: 10px;
 	}
 	& h2 {
-		color: rgba(81, 89, 148, 0.5);
-		margin: 30px 0 20px;
+		font-family: $WS-sb;
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 42px;
+		color: #515994;
+		margin: 20px 0 10px;
+	}
+	& h3 {
+		font-family: $WS-sb;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 42px;
+		color: #515994;
+		margin: 10px 0 2px;
+	}
+	& h1, h2, h3, h4, p {
+		text-transform: capitalize;
 	}
 	& h4 {
+		font-family: $WS-r;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 42px;
+		color: rgba(81, 89, 148, 0.5);
 		margin: 10px 0 20px;
 	}
 	& p {
+		font-family: $WS-r;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 30px;
+		color: #515994;
 		@media screen and (max-width: 590px) {
 			text-align: justify;
 		}
 		& strong {
+			font-family: $WS-sb;
 			font-weight: 600;
 		}
+	}
+	& ul {
+		padding-left: 12px;
+		& li {
+			font-family: $WS-r;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 30px;
+			color: #515994;
+			& strong {
+				font-family: $WS-sb;
+				font-weight: 600;
+				padding-left: 12px;
+			}
+		}
+	}
+	& ol {
+		& li {
+			font-family: $WS-r;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 30px;
+			color: #515994;
+			& strong {
+				font-family: $WS-sb;
+				font-weight: 600;
+				padding-left: 12px;
+			}
+		}
+	}
+	& a {
+		font-family: $WS-r;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 30px;
+		text-transform: capitalize;
+		color: #515994;
+		text-decoration: underline;
 	}
 }

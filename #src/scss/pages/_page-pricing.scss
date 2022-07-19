@@ -1,0 +1,267 @@
+.pricing {
+	display: flex;
+	grid-gap: 30px;
+	padding: 110px 0;
+	&.bild {
+		height: calc(100vh - 421px);
+		@media screen and (max-height: 960px) {
+				height: auto;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		padding: 20px 0 50px;
+	}
+	
+	&-block {
+		background: #F6F4FF;
+		box-shadow: 0 3px 6px #EBEBEB;
+		border-radius: 6px;
+		padding: 50px 30px 50px;
+		width: 100%;
+		@media screen and (max-width: 580px) {
+			padding: 20px 10px;
+		}
+		& > .f54-l70 {
+			@media screen and (max-width: 580px) {
+				font-size: 27px;
+				line-height: 37px;
+			}
+		}
+		
+		& > .title.b span:after {
+			@media screen and (max-width: 580px) {
+				height: 7px;
+			}
+		}
+		
+		& > .title.b span:after {
+			@media screen and (max-width: 580px) {
+				bottom: 4px;
+			}
+		}
+	}
+	
+	&-item {
+		&.dn {
+			display: none;
+		}
+		max-width: 490px;
+		height: 780px;
+		width: 100%;
+		position: relative;
+		@media screen and (max-width: 768px) {
+			max-width: 100%;
+		}
+		@media screen and (max-width: 580px) {
+			height: 650px;
+		}
+		
+		&:hover .pricing-item-cont {
+			transform: translateY(-85px);
+			@media screen and (max-width: 768px) {
+				transform: translateY(0);
+			}
+		}
+		
+		&:hover .pricing-item-hov {
+			border-radius: 0;
+			height: 85px;
+			opacity: 1;
+			@media screen and (max-width: 768px) {
+				height: 0;
+			}
+		}
+		
+		&-cont {
+			background: #F6F4FF;
+			box-shadow: 0 3px 6px #EBEBEB;
+			border-radius: 6px;
+			padding: 40px 45px 120px;
+			height: 100%;
+			position: relative;
+			z-index: 5;
+			transition: all 0.3s linear;
+			@media screen and (max-width: 1024px) {
+				padding: 25px 20px 80px;
+			}
+			@media screen and (max-width: 580px) {
+				padding: 15px 10px 20px;
+			}
+		}
+		
+		&-hov {
+			transition: height 1s linear;
+			height: 0;
+			width: 100%;
+			position: absolute;
+			z-index: 1;
+			bottom: 0;
+			border-radius: 6px;
+			overflow: hidden;
+		}
+		
+		&-img {
+			margin-bottom: 40px;
+			text-align: center;
+			@media screen and (max-width: 580px) {
+				margin-bottom: 20px;
+			}
+		}
+		
+		&-wrapper {
+			& h2 {
+				padding-bottom: 16px;
+				margin-bottom: 18px;
+				position: relative;
+				@media screen and (max-width: 580px) {
+					padding-bottom: 8px;
+					margin-bottom: 9px;
+					font-size: 26px;
+				}
+				
+				&:after {
+					content: '';
+					display: block;
+					width: 261px;
+					height: 2px;
+					background: #1BC082;
+					border-radius: 1px;
+					position: absolute;
+					bottom: -2px;
+				}
+			}
+			
+			& h3 {
+				line-height: 55px;
+				@media screen and (max-width: 580px) {
+					font-size: 30px;
+				}
+			}
+		}
+		
+		&-list {
+			margin: 35px 0 45px;
+			@media screen and (max-width: 580px) {
+				margin: 17.5px 0 22.5px;
+			}
+			
+			& li {
+				padding-left: 50px;
+				position: relative;
+				margin-bottom: 20px;
+				@media screen and (max-width: 580px) {
+					font-size: 18px;
+					margin-bottom: 10px;
+				}
+			}
+			
+			& li:last-child {
+				margin-bottom: 0;
+			}
+			
+			& li:before {
+				content: '';
+				display: block;
+				width: 36px;
+				height: 36px;
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='27' height='19' viewBox='0 0 27 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M26.1715 1.2035C26.2762 1.30801 26.3593 1.43215 26.4161 1.56883C26.4728 1.70551 26.502 1.85203 26.502 2C26.502 2.14798 26.4728 2.2945 26.4161 2.43118C26.3593 2.56786 26.2762 2.692 26.1715 2.7965L10.4215 18.5465C10.317 18.6513 10.1928 18.7344 10.0561 18.7911C9.91945 18.8478 9.77293 18.877 9.62495 18.877C9.47698 18.877 9.33046 18.8478 9.19378 18.7911C9.0571 18.7344 8.93296 18.6513 8.82845 18.5465L0.953456 10.6715C0.742211 10.4603 0.623535 10.1738 0.623535 9.875C0.623535 9.57626 0.742211 9.28975 0.953456 9.07851C1.1647 8.86726 1.45121 8.74858 1.74996 8.74858C2.0487 8.74858 2.33521 8.86726 2.54646 9.07851L9.62495 16.1593L24.5785 1.2035C24.683 1.09874 24.8071 1.01562 24.9438 0.958901C25.0805 0.902187 25.227 0.872993 25.375 0.872993C25.5229 0.872993 25.6695 0.902187 25.8061 0.958901C25.9428 1.01562 26.0669 1.09874 26.1715 1.2035Z' fill='%231BC082'/%3e%3c/svg%3e");
+				background-repeat: no-repeat;
+				position: absolute;
+				left: 0;
+				top: calc(25% - 8px);
+			}
+		}
+		
+		&-btn {
+			position: absolute;
+			left: calc(50% - 100px);
+			bottom: 60px;
+		}
+	}
+}
+
+.f-bg {
+	align-items: flex-end;
+	
+	& .g-p {
+		width: 7.26px;
+		background: $purple;
+	}
+	
+	& .g-a-0 {
+		height: 48px;
+	}
+	
+	& .g-a-1 {
+		height: 37px;
+	}
+	
+	& .g-a-2 {
+		height: 45px;
+	}
+	
+	& .g-a-3 {
+		height: 55px;
+	}
+	
+	& .g-a-4 {
+		height: 62px;
+	}
+	
+	& .g-a-5 {
+		height: 66px;
+	}
+	
+	& .g-a-6 {
+		height: 72px;
+	}
+	
+	& .g-a-7 {
+		height: 74px;
+	}
+	
+	& .g-a-8 {
+		height: 70px;
+	}
+	
+	& .g-a-9 {
+		height: 59px;
+	}
+	
+	& .g-a-10 {
+		height: 50px;
+	}
+	
+	& .g-a-11 {
+		height: 37px;
+	}
+	
+	& .g-a-12 {
+		height: 38px;
+	}
+	
+	& .g-a-13 {
+		height: 40px;
+	}
+	
+	& .g-a-14 {
+		height: 72px;
+	}
+	
+	& .g-a-15 {
+		height: 53px;
+	}
+	
+	& .g-a-16 {
+		height: 23px;
+	}
+	
+	& .g-a-17 {
+		height: 72px;
+	}
+	
+	
+	
+	
+}

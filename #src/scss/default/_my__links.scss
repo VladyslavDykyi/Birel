@@ -12,4 +12,7 @@
 		color: $green;
 		border-bottom:1px solid transparent;
 	}
+	&.active {
+		color: $green;
+	}
 }

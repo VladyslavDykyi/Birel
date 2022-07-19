@@ -20,17 +20,18 @@ $gradient-two: linear-gradient(93.19deg, #573CDA 10.16%, #3D2B93 97.41%);
 $box-shadow: 6px 6px 64px rgba(0, 0, 0, 0.25);
 $box-shadow2: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-$A-r: "anton-Regular";
-$WS-r: "WorkSans-Regular";
-$WS-m: "WorkSans-Medium";
-$WS-sb: "WorkSans-SemiBold";
+$A-r:"anton-Regular", sans-serif;
+$WS-r:"WorkSans-Regular", sans-serif;
+$WS-m:"WorkSans-Medium", sans-serif;
+$WS-sb:"WorkSans-SemiBold", sans-serif;
+
 
 .bg-site {
 	padding: 0;
 }
 .bg-registration {
 	background-color: $purple;
-	height: calc(100vh - 276px);
+	height: calc(100vh - 271px);
 	display: flex;
 	align-items: center;
 	padding: 150px 0 24px;
@@ -53,6 +54,7 @@ $WS-sb: "WorkSans-SemiBold";
 	width: 650px;
 	margin: 0 auto;
 	padding: 50px 0 0;
+	border-radius: 6px;
 	@media screen and (max-width: 700px) {
 		width: 100%;
 	}

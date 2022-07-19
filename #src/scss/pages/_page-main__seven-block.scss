@@ -19,6 +19,9 @@
 	& .content-block-right {
 		padding: 80px 100px 60px 95px;
 		background: $white;
+		border-radius: 6px;
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+		background: linear-gradient(215.96deg, #FFFFFF 9.21%, #E5DDFA 96.76%);
 		@media screen and (max-width: 580px) {
 			padding: 30px 50px 30px 45px;
 		}

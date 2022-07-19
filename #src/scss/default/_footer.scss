@@ -5,14 +5,15 @@
 		padding: 50px 0 20px;
 	}
 }
+
 .footer-grid {
 	display: grid;
 	grid-template-areas:
 			"logo nav1 nav2 mail"
 			"copyright nav1 nav2 mail";
-	grid-template-columns: 23% 23% 23% 23%;
+	grid-template-columns: 23% 15% 15% 23%;
 	grid-template-rows: 50%;
-	grid-gap: 2.66667%;
+	grid-gap: 8%;
 	@media screen and (max-width: 580px) {
 		grid-template-areas:
 			"logo nav2"
@@ -33,6 +34,7 @@
 		grid-gap: 20px 10%;
 	}
 }
+
 .footer-logo {
 	grid-area: logo;
 	display: flex;
@@ -46,6 +48,7 @@
 		margin-left: 0;
 		flex-direction: row;
 	}
+	
 	& .list-soc {
 		display: flex;
 		grid-gap: 15px;
@@ -58,21 +61,25 @@
 			margin-top: 0;
 			margin-left: 88px;
 		}
+		
 		&-item {
 			& a i:before {
-				font-size: 32px;
+				font-size: 34px;
 			}
 		}
 	}
 }
+
 .footer-copyright {
 	grid-area: copyright;
+	
 	& p {
 		@media screen and (max-width: 580px) {
 			text-align: center;
 		}
 	}
 }
+
 .footer-nav1 {
 	grid-area: nav1;
 	@media screen and (max-width: 580px) {
@@ -82,9 +89,11 @@
 		margin-left: 0;
 	}
 }
+
 .footer-nav2 {
 	grid-area: nav2;
 }
+
 .list-nav {
 	&-item {
 		margin-bottom: 20px;
@@ -92,48 +101,51 @@
 			margin-bottom: 10px;
 		}
 	}
-	&:last-child  {
+	
+	&:last-child {
 		margin-bottom: 0;
 	}
 }
-.list-nav .list-nav-item:last-child{
+
+.list-nav .list-nav-item:last-child {
 	margin-bottom: 0;
 }
+
 .footer-mail {
 	grid-area: mail;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	//@media screen and (max-width: 580px) {
-	//	align-items: flex-start;
-	//}
-	//@media screen and (max-width: 450px) {
-	//	align-items: flex-start;
-	//}
+	
 	& form {
 		margin-bottom: 20px;
 		border-bottom: 1px solid $grey;
 		@media screen and (max-width: 425px) {
 			width: 100%;
 		}
+		
 		& label {
 			display: flex;
 			align-items: center;
+			
 			& .i-f {
 				border-bottom: none;
 			}
+			
 			& .reset-btn i:before {
 				color: $white;
 			}
 		}
 	}
+	
 	& p {
-		margin-bottom: 14px;
+		margin-bottom: 20px;
 		@media screen and (max-width: 425px) {
 			margin-bottom: 20px;
 		}
 	}
-	&  p:last-child {
+	
+	& p:last-child {
 		margin-bottom: 0;
 	}
 }

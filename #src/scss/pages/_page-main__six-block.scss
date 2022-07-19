@@ -11,7 +11,7 @@
 		margin-bottom: 50px;
 	}
 	&-text {
-		padding: 35px 25px 55px 20px;
+		padding: 35px 10px 55px 10px;
 		@media screen and (max-width: 580px) {
 			padding: 35px 0 55px 0;
 		}
@@ -20,22 +20,13 @@
 		}
 	}
 	&-img {
-		width: 440px;
-		height: 286px;
 		background: $gradient;
-		@media screen and (max-width: 1024px) {
-			width: 340px;
-		}
-		@media screen and (max-width: 768px) {
-			width: 270px;
-		}
-		@media screen and (max-width: 580px) {
-			width: 230px;
-			height: 240px;
-		}
-		@media screen and (max-width: 425px) {
-			width: 100%;
-			height: auto;
+		display: flex;
+		justify-content: center;
+		padding: 30px 0;
+		& img {
+			width: 160px;
+			height: 158px;
 		}
 	}
 	&-cont {
@@ -43,79 +34,16 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		@media screen and (max-width: 768px) {
+		
 		}
 	}
-	&-search {
-		width: 440px;
-		@media screen and (max-width: 1024px) {
-			width: 340px;
-		}
-		@media screen and (max-width: 768px) {
-			width: 270px;
-		}
-		@media screen and (max-width: 580px) {
-			width: 230px;
-		}
-		@media screen and (max-width: 425px) {
-			width: 100%;
-		}
-		& div img {
-			padding: 40px 140px;
-			@media screen and (max-width: 1024px) {
-				padding: 40px 66px;
-			}
-			@media screen and (max-width: 580px) {
-				padding: 40px 34px;
-			}
-		}
-	}
-	&-shield {
-		width: 440px;
-		@media screen and (max-width: 1024px) {
-			width: 340px;
-		}
-		@media screen and (max-width: 768px) {
-			width: 270px;
-		}
-		@media screen and (max-width: 580px) {
-			width: 230px;
-		}
-		@media screen and (max-width: 425px) {
-			width: 100%;
-		}
-		& div img {
-			padding: 40px 140px;
-			@media screen and (max-width: 1024px) {
-				padding: 40px 88px;
-			}
-			@media screen and (max-width: 580px) {
-				padding: 40px 52px;
-			}
-		}
-	}
-	
 	&-arrow {
-		width: 440px;
+		width: 23%;
 		@media screen and (max-width: 1024px) {
-			width: 340px;
-		}
-		@media screen and (max-width: 768px) {
-			width: 270px;
+			width: 45%;
 		}
 		@media screen and (max-width: 580px) {
-			width: 230px;
-		}
-		@media screen and (max-width: 425px) {
 			width: 100%;
-		}
-		& div img {
-			padding: 40px 120px;
-			@media screen and (max-width: 1024px) {
-				padding: 40px 66px;
-			}
-			@media screen and (max-width: 580px) {
-				padding: 40px 34px;
-			}
 		}
 	}
 }
